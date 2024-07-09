@@ -15,6 +15,8 @@ import calendar
 import json
 import matplotlib.pyplot as plt
 from datetime import datetime
+import leafmap.foliumap as leafmap
+
 
 
 #setting the path to call datasets and images 
@@ -40,7 +42,124 @@ EFFIS_fires = EFFIS_fires[EFFIS_fires['admlvl2'].isin(['Calabria'])]
 center = (float(catchment_outline.centroid.y), float(catchment_outline.centroid.x))
 
 
+m = leafmap.Map(zoom=10) #center=center, 
 
+m.add_raster(f"static/SENTINEL2/1/2023-07-18.tiff", layer_name="Pre-fire")
+# add effis_only to the map
+m
+
+# save the map as an html file
+m.to_html("static/SENTINEL2/1/pre.html")
+
+
+
+m = leafmap.Map(zoom=10) #center=center, 
+
+m.add_raster(f"static/SENTINEL2/1/2023-07-28.tiff", layer_name="Post-fire")
+# add effis_only to the map
+m
+
+# save the map as an html file
+m.to_html("static/SENTINEL2/1/post.html")
+
+
+
+m = leafmap.Map(zoom=10) #center=center, 
+
+m.add_raster(f"static/SENTINEL2/2/2023-07-16.tiff", layer_name="Pre-fire")
+# add effis_only to the map
+m
+
+# save the map as an html file
+m.to_html("static/SENTINEL2/2/pre.html")
+
+
+m = leafmap.Map(zoom=10) #center=center, 
+
+m.add_raster(f"static/SENTINEL2/2/2023-07-23.tiff", layer_name="Post-fire")
+# add effis_only to the map
+m
+
+# save the map as an html file
+m.to_html("static/SENTINEL2/2/post.html")
+
+
+
+
+
+
+
+m = leafmap.Map(zoom=10) #center=center, 
+
+m.add_raster(f"static/SENTINEL2/3/2023-07-21.tiff", layer_name="Pre-fire")
+# add effis_only to the map
+m
+
+# save the map as an html file
+m.to_html("static/SENTINEL2/3/pre.html")
+
+
+m = leafmap.Map(zoom=10) #center=center, 
+
+m.add_raster(f"static/SENTINEL2/3/2023-07-23.tiff", layer_name="Post-fire")
+# add effis_only to the map
+m
+
+# save the map as an html file
+m.to_html("static/SENTINEL2/3/post.html")
+
+
+
+
+
+
+
+
+
+
+m = leafmap.Map(zoom=10) #center=center, 
+
+m.add_raster(f"static/SENTINEL2/4/2023-07-21.tiff", layer_name="Pre-fire")
+# add effis_only to the map
+m
+
+# save the map as an html file
+m.to_html("static/SENTINEL2/4/pre.html")
+
+
+m = leafmap.Map(zoom=10) #center=center, 
+
+m.add_raster(f"static/SENTINEL2/4/2023-07-28.tiff", layer_name="Post-fire")
+# add effis_only to the map
+m
+
+# save the map as an html file
+m.to_html("static/SENTINEL2/4/post.html")
+
+
+
+
+
+
+
+m = leafmap.Map(zoom=10) #center=center, 
+
+m.add_raster(f"static/SENTINEL2/5/2023-08-25.tiff", layer_name="Pre-fire")
+# add effis_only to the map
+m
+
+# save the map as an html file
+m.to_html("static/SENTINEL2/5/pre.html")
+
+
+m = leafmap.Map(zoom=10) #center=center, 
+
+m.add_raster(f"static/SENTINEL2/5/2023-08-27.tiff", layer_name="Post-fire")
+# add effis_only to the map
+m
+
+# save the map as an html file
+m.to_html("static/SENTINEL2/5/post.html")
 
 
 
